@@ -6,17 +6,17 @@ end
 
 RegisterNetEvent(Config.EventPrefix..":giveKeys")
 AddEventHandler(Config.EventPrefix..":giveKeys", function(vehicle)
-	TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle))
+	exports.wasabi_carlock:GiveKey(QBCore.Functions.GetPlate(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":giveKeysTestDrive")
 AddEventHandler(Config.EventPrefix..":giveKeysTestDrive", function(vehicle)
-	TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle))
+	exports.wasabi_carlock:GiveKey(QBCore.Functions.GetPlate(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":giveKeysTowTruck")
 AddEventHandler(Config.EventPrefix..":giveKeysTowTruck", function(vehicle)
-	TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle))
+	exports.wasabi_carlock:GiveKey(QBCore.Functions.GetPlate(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":notification")
