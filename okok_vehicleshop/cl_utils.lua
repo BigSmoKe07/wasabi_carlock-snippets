@@ -3,16 +3,19 @@ ESX = exports.es_extended:getSharedObject()
 RegisterNetEvent(Config.EventPrefix..":giveKeys")
 AddEventHandler(Config.EventPrefix..":giveKeys", function(vehicle)
 	-- Leave blank if you have no keys to give
+	exports.wasabi_carlock:GiveKey(GetVehicleNumberPlateText(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":giveKeysTestDrive")
 AddEventHandler(Config.EventPrefix..":giveKeysTestDrive", function(vehicle)
 	-- Leave blank if you have no keys to give
+	exports.wasabi_carlock:GiveKey(GetVehicleNumberPlateText(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":giveKeysTowTruck")
 AddEventHandler(Config.EventPrefix..":giveKeysTowTruck", function(vehicle)
 	-- Leave blank if you have no keys to give
+	exports.wasabi_carlock:GiveKey(GetVehicleNumberPlateText(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":notification")
@@ -43,16 +46,19 @@ end)
 RegisterNetEvent(Config.EventPrefix..":onStartTestDrive")
 AddEventHandler(Config.EventPrefix..":onStartTestDrive", function(vehicle)
 	-- Code to execute when the player starts the test drive
+	exports.wasabi_carlock:GiveKey(GetVehicleNumberPlateText(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":onFinishTestDrive")
 AddEventHandler(Config.EventPrefix..":onFinishTestDrive", function(vehicle)
 	-- Code to execute when the player finishes the test drive
+	exports.wasabi_carlock:RemoveKey(GetVehicleNumberPlateText(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":onFinishMission")
 AddEventHandler(Config.EventPrefix..":onFinishMission", function(vehicle)
 	-- Code to execute when the player finishes a mission/order
+	exports.wasabi_carlock:RemoveKey(GetVehicleNumberPlateText(vehicle))
 end)
 
 RegisterNetEvent(Config.EventPrefix..":deleteVehicle")
