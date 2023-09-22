@@ -102,6 +102,8 @@ function giveKeysToPlayer(source, identifier, vehPlate, vehName, isSociety, give
 		end
 	else
 		-- Your key system goes here
+		exports.wasabi_carlock:GiveKeys(vehPlate, source)
+
 	end
 end
 
